@@ -1,0 +1,42 @@
+.side-bar {
+  max-width: 15%;
+  min-width: 250px;
+}
+.download {
+  color: #929292;
+  font-weight: bold;
+  font-size: 0.815rem;
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+}
+.download:hover {
+  color: white;
+  cursor: pointer;
+}
+.download-icon {
+  margin-right: 15px;
+}
+.list-item {
+  color: #929292;
+}
+.list-item:hover {
+  color: white;
+  cursor: pointer;
+}
+/*Scrollbar Style*/
+::-webkit-scrollbar {
+  width: 8px;
+  transition: 0.4s;
+}
+::-webkit-scrollbar-track {
+  background: black;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(77, 77, 77);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(128, 128, 128);
+}
+/*Scrollbar Style*/

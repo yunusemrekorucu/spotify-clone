@@ -1,0 +1,20 @@
+.long-card-body {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .long-card {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    width: 96%;
+    height: 80px;
+    border-radius: 4px;
+    margin-top: 15px;
+    background: rgba(207, 207, 207, 0.131);
+  }
+  .long-card-img {
+    width: 16%;
+    height: 100%;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }

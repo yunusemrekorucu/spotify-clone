@@ -1,0 +1,64 @@
+.footer {
+  background: rgb(19, 19, 19);
+  width: 100vw;
+  height: 85px;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid rgb(36, 36, 36);
+}
+.music-info {
+  width: 25%;
+  display: flex;
+  align-items: center;
+}
+.music-banner {
+  width: 70px;
+  height: 70px;
+  margin: 0px 10px;
+}
+.music-info-p p {
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 25px;
+}
+.music-info-p span {
+  color: gray;
+  font-size: 12px;
+}
+.player {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.player-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.player-buttons svg {
+  margin: 5px 10px;
+}
+.pause-button {
+  background: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 15px;
+}
+
+.options {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-right: 20px;
+}
+.options svg {
+  margin: 0px 7px;
+}
