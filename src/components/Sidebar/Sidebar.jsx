@@ -10,7 +10,9 @@ function Sidebar() {
   return (
     <div className="side-bar bg-black h-screen pl-6 pt-6">
       <div className="flex items-center">
-        <img className="mb-[24px]" src={Logo} width={131} alt="" />
+        <a href="/">
+          <img className="mb-[24px]" src={Logo} width={131} alt="" />
+        </a>
       </div>
       <ul className="font-bold text-sm text-stone-400">
         <li className="flex items-center h-10 hover:text-white">
@@ -41,7 +43,7 @@ function Sidebar() {
         </ul>
         <hr className="mt-3 w-52 border-gray-800" />
         <div className="min-h-[530px] max-h-[530px] overflow-auto list-none">
-          {new Array(12).fill(
+          {new Array(21).fill(
             <li className="py-1 text-sm list-item">14. Çalma listem</li>
           )}
         </div>

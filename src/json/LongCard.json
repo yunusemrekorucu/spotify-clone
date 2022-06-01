@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "image": "https://misc.scdn.co/liked-songs/liked-songs-640.png",
+        "title": "Beğenilen Şarkılar"
+    },
+    {
+        "id": 2,
+        "image": "https://newjams-images.scdn.co/v3/release-radar/ab6761610000e5eb5f7573cb6438bac573729ec1/tr/default",
+        "title": "Yeni Müzik Radarı"
+    },
+    {
+        "id": 3,
+        "image": "https://seed-mix-image.spotifycdn.com/v6/img/pop/3uQEPbRxWOThQXNamSmcfc/tr/default",
+        "title": "Pop Mix"
+    },
+    {
+        "id": 4,
+        "image": "https://i.scdn.co/image/ab67706f00000002c7bc1c3f402cd985862181a1",
+        "title": "Yılın Şarkıları 2021"
+    },
+    {
+        "id": 5,
+        "image": "https://i.scdn.co/image/ab67706f00000002b29e6842606a6dc5d3570e8e",
+        "title": "Hot Hits Türkiye"
+    },
+    {
+        "id": 6,
+        "image": "https://seed-mix-image.spotifycdn.com/v6/img/two_thousands/0mkH5jj3goQ51JtPKVodTo/tr/default",
+        "title": "2000'ler Mix"
+    }
+]
