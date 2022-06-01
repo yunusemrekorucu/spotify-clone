@@ -9,7 +9,7 @@ function App() {
     <div className="w-screen">
       <div className="flex">
         <Sidebar />
-        <div className="column w-[85%]">
+        <div className="content column w-[85%]">
           <Header />
           <MainMenu />
         </div>

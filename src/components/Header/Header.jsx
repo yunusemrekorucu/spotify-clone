@@ -41,7 +41,9 @@ export function Header() {
             src="https://i.scdn.co/image/ab6775700000ee855be80f2e3810102a23ee1daf"
             alt=""
           />
-          <span className="text-sm">YunusEmr</span>
+          <a href="/profile" className="text-sm">
+            YunusEmr
+          </a>
           <svg
             className="mr-1"
             role="img"

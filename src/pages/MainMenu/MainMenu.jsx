@@ -10,12 +10,14 @@ export function MainMenu() {
         <h1>İyi Akşamlar</h1>
         <div className="long-card-body">{new Array(6).fill(<LongCard />)}</div>
       </div>
-      <div>
-        <div className="flex justify-between items-center">
+      <div className="cards">
+        <div className="cards-header">
           <h1 className="text-[1.4rem] font-bold">YunusEmr İçin Derlendi</h1>
-          <span className="text-xs text-gray-500 font-bold">HEPSİNİ GÖR</span>
+          <span className="see-all">
+            HEPSİNİ GÖR
+          </span>
         </div>
-        <div className="card-body">{new Array(7).fill(<Card />)}</div>
+        <div className="card-body">{new Array(10).fill(<Card />)}</div>
       </div>
     </div>
   );

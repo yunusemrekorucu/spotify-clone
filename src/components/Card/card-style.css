@@ -4,7 +4,7 @@
   padding: 15px;
   width: 13%;
   transition: 0.3s;
-  margin: 0px 15px;
+  margin-right: 20px;
 }
 .card:hover {
   background: #282828;

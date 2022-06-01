@@ -3,7 +3,7 @@
   width: 100vw;
   height: 85px;
   display: flex;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   border-top: 1px solid rgb(36, 36, 36);
 }
@@ -57,7 +57,7 @@
   display: flex;
   align-items: center;
   justify-content: end;
-  margin-right: 20px;
+  padding-right: 25px;
 }
 .options svg {
   margin: 0px 7px;
