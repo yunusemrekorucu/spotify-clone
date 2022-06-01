@@ -1,10 +1,11 @@
 .long-card-body {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(3, auto);
   align-items: center;
-  width: 99%;
+  width: 100%;
 }
 .long-card {
+  position: relative;
   display: flex;
   align-items: center;
   font-weight: bold;
@@ -13,10 +14,34 @@
   border-radius: 4px;
   margin-top: 15px;
   background: rgba(207, 207, 207, 0.131);
+  transition: 0.4s;
+  cursor: pointer;
+}
+.long-card:hover {
+  background: #454157;
 }
 .long-card-img {
   width: 16%;
   height: 100%;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+  object-fit: cover;
+}
+.long-card-btn {
+  background: #1ed760;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  transition: 0.3s;
+  opacity: 0;
+  visibility: hidden;
+}
+.long-card:hover .long-card-btn {
+  visibility: visible;
+  opacity: 1;
 }

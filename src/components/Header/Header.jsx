@@ -34,16 +34,14 @@ export function Header() {
           </svg>
         </button>
       </div>
-      <div>
+      <div className="dropdown">
         <button className="header-dropdown-menu">
           <img
             className="dropdown-img"
             src="https://i.scdn.co/image/ab6775700000ee855be80f2e3810102a23ee1daf"
             alt=""
           />
-          <a href="/profile" className="text-sm">
-            YunusEmr
-          </a>
+          <span className="text-sm">YunusEmr</span>
           <svg
             className="mr-1"
             role="img"
@@ -55,6 +53,11 @@ export function Header() {
             <path fill="#fff" d="M14 6l-6 6-6-6h12z" />
           </svg>
         </button>
+        <div class="dropdown-content">
+          <a href="">Hesap</a>
+          <a href="/profile">Profil</a>
+          <a href="">Oturum Kapat</a>
+        </div>
       </div>
     </div>
   );

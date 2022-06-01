@@ -2,9 +2,8 @@
   background: rgb(23, 23, 23);
   border-radius: 6px;
   padding: 15px;
-  width: 13%;
+  width: 100%;
   transition: 0.3s;
-  margin-right: 20px;
 }
 .card:hover {
   background: #282828;

@@ -3,19 +3,27 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Footer from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { MainMenu } from "./pages/MainMenu/MainMenu";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   return (
-    <div className="w-screen">
-      <div className="flex">
-        <Sidebar />
-        <div className="content column w-[85%]">
-          <Header />
-          <MainMenu />
+    <BrowserRouter>
+      <div className="w-screen">
+        <div className="flex">
+          <Sidebar />
+          <div className="content column w-[85%]">
+            <Header />
+            {/* <MainMenu /> */}
+            <Routes>
+              <Route path="/" element={<MainMenu />} />
+              <Route path="/profile" element={<Profile />} />
+            </Routes>
+          </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </BrowserRouter>
   );
 }
 
