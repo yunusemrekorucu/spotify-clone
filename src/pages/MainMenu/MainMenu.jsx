@@ -23,6 +23,20 @@ export function MainMenu() {
         </div>
         <div className="card-body">{new Array(7).fill(<Card />)}</div>
       </div>
+      <div className="cards">
+        <div className="cards-header">
+          <h1 className="text-[1.4rem] font-bold">YunusEmr İçin Derlendi</h1>
+          <span className="see-all">HEPSİNİ GÖR</span>
+        </div>
+        <div className="card-body">{new Array(7).fill(<Card />)}</div>
+      </div>
+      <div className="cards">
+        <div className="cards-header">
+          <h1 className="text-[1.4rem] font-bold">YunusEmr İçin Derlendi</h1>
+          <span className="see-all">HEPSİNİ GÖR</span>
+        </div>
+        <div className="card-body">{new Array(7).fill(<Card />)}</div>
+      </div>
     </div>
   );
 }
