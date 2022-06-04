@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import Card from "../../components/Card/Card";
 import LongCard from "../../components/LongCard/LongCard";
+import LongCardItems from "../../json/LongCard.json";
 import "./mainmenu-style.css";
 
 export function MainMenu() {
