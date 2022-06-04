@@ -15,7 +15,7 @@ function Profile() {
               alt=""
             />
           </div>
-          <div className="info-text">
+          <div className="info-text ml-5 ">
             <span>PROFİL</span>
             <h1>YunusEmr</h1>
             <div>

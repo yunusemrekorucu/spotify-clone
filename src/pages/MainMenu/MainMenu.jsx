@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
 import Card from "../../components/Card/Card";
 import LongCard from "../../components/LongCard/LongCard";
-import LongCardItems from "../../json/LongCard.json";
 import "./mainmenu-style.css";
 
 export function MainMenu() {
-  console.log(LongCardItems);
+  const [longCard, setlongCard] = useState([]);
+  const getLongCards = async () => {
+    const res = await fetch("http://localhost:1337/api/long-cards");
+    const response = await res.json();
+    const data = response.data[0].attributes.LongCardJson;
+    setlongCard(data);
+  };
+  useEffect(() => {
+    getLongCards();
+  }, []);
+
   return (
     <div className="main-menu">
       <div className="top-section">
         <h1>İyi Akşamlar</h1>
         <div className="long-card-body">
-          {LongCardItems.map((item) => (
+          {longCard.map((item) => (
             <LongCard title={item.title} image={item.image} key={item.id} />
           ))}
         </div>
