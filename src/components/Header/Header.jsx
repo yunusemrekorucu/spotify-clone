@@ -54,9 +54,9 @@ export function Header() {
           </svg>
         </button>
         <div class="dropdown-content">
-          <a href="">Hesap</a>
+          <a href="#">Hesap</a>
           <a href="/profile">Profil</a>
-          <a href="">Oturum Kapat</a>
+          <a href="#">Oturum Kapat</a>
         </div>
       </div>
     </div>

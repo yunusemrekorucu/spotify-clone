@@ -1,14 +1,11 @@
 import React from "react";
 import "./card-style.css";
 
-function Card() {
+function Card({ title, description, image }) {
   return (
     <div className="card">
-      <div className="relative">
-        <img
-          src="https://dailymix-images.scdn.co/v2/img/ab6761610000e5eba14fd21d411cb52a266bb69c/1/tr/default"
-          alt=""
-        />
+      <div className="img-box relative">
+        <img src={image} alt="" />
         <button className="card-button">
           <svg
             role="img"
@@ -24,8 +21,8 @@ function Card() {
           </svg>
         </button>
       </div>
-      <h4>Daily Mix 1</h4>
-      <p>KÖFN,Yaşlı Amca,Canozan,Dolu Kadehi Ters Tut ve dah...</p>
+      <h4>{title}</h4>
+      <p>{description}</p>
     </div>
   );
 }

@@ -1,12 +1,17 @@
-import React from "react";
 import "./sidebar-style.css";
 import Logo from "../../img/logo.svg";
-import Home from "../../img/home.svg";
-import Search from "../../img/libraries.svg";
-import Libraries from "../../img/search.svg";
-// import Hearth from "../../img/hearth.svg";
+import { GoSearch } from "react-icons/go";
+import { VscLibrary, VscHome } from "react-icons/vsc";
+import { FaHeart } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 function Sidebar() {
+  let activeStyle = {
+    display: "flex",
+    color: "white",
+    alignİtems: "center"
+  };
+
   return (
     <div className="side-bar bg-black h-screen pl-6 pt-6">
       <div className="flex items-center">
@@ -15,36 +20,52 @@ function Sidebar() {
         </a>
       </div>
       <ul className="font-bold text-sm text-stone-400">
-        <li className="flex items-center h-10 hover:text-white">
-          <img className="mr-4 hover:text-[#fff]" src={Home} alt="home" />
+        <NavLink
+          className="nav-link"
+          to="/"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          <VscHome className="home-icon icon mr-4" />
           Ana Sayfa
-        </li>
-        <li className="flex items-center h-10 hover:text-white">
-          <img className="mr-4" src={Libraries} alt="search" />
+        </NavLink>
+
+        <NavLink
+          to="/search"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          className="nav-link"
+        >
+          <GoSearch className="icon mr-4" />
           Ara
-        </li>
-        <li className="flex items-center h-10 hover:text-white">
-          <img className="mr-4" src={Search} alt="libraries" />
+        </NavLink>
+
+        <NavLink
+          to="/libraries"
+          className="nav-link"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+        >
+          <VscLibrary className="icon mr-4" jsx={{ color: "white" }} />
           Kitaplığın
-        </li>
+        </NavLink>
       </ul>
       <div className="w-full mt-6">
         <ul className="font-bold text-[0.812rem] text-stone-300">
           <li className="flex items-center h-10">
             <span className=" bg-[#b3b3b3] w-6 h-6 mr-4 font-light text-lg flex items-center justify-center text-black">
               +
-            </span>{" "}
+            </span>
             Çalma Listesi Oluştur
           </li>
           <li className="flex items-center h-10">
-            <span className="bg-gradient-to-r from-purple-400 to-blue-300 w-6 h-6 mr-4"></span>
+            <span className="flex items-center justify-center bg-gradient-to-r from-purple-400 to-blue-300 w-6 h-6 mr-4 text-lg">
+              <FaHeart />
+            </span>
             Beğenilen Şarkılar
           </li>
         </ul>
         <hr className="mt-3 w-52 border-gray-800" />
         <div className="min-h-[530px] max-h-[530px] overflow-auto list-none">
-          {new Array(21).fill(
-            <li className="py-1 text-sm list-item">14. Çalma listem</li>
+          {new Array(7).fill(
+            <li className="py-1 text-sm list-item">12. Çalma listem</li>
           )}
         </div>
         <div className="download">

@@ -1,17 +1,28 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import MostListened from "../../components/MostListenedList/MostListened";
 import ProfileCard from "../../components/ProfileCard/ProfileCard";
 import "./profile-style.css";
 
 function Profile() {
+  const fileRef = useRef();
+  const [img, setImg] = useState("");
+  const changeImage = (e) => {
+    const imagename = e.target.value;
+    var image = imagename.replace(/^.*\\/, "");
+    setImg(image);
+  };
+
   return (
     <>
       <div className="profile">
         <div className="profile-info">
           <div className="profile-image">
-            <input type="file" />
+            <input ref={fileRef} onChange={(e) => changeImage(e)} type="file" />
             <img
-              src="https://i.scdn.co/image/ab6775700000ee855be80f2e3810102a23ee1daf"
+              onClick={() => {
+                fileRef.current.click();
+              }}
+              src={img}
               alt=""
             />
           </div>

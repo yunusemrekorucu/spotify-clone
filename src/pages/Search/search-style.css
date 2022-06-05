@@ -1,0 +1,29 @@
+.big-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 425px);
+  gap: 25px;
+}
+.big-card {
+  background: #ba5d07;
+  height: 225px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.big-card h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 10px 15px;
+}
+.big-card img {
+  position: absolute;
+  right: -20px;
+  bottom: -10px;
+  width: 125px;
+  transform: rotate(25deg);
+}
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  gap: 24px;
+}

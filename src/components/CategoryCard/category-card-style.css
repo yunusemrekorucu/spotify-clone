@@ -1,0 +1,16 @@
+.category-card {
+  border: 1px solid green;
+  min-height: 200px;
+  background: #28856a;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-card img {
+  width: 45%;
+  right: -15px;
+  bottom: -10px;
+  position: absolute;
+  transform: rotate(27deg);
+}

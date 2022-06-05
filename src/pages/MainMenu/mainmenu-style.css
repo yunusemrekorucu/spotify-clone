@@ -1,7 +1,7 @@
 .main-menu {
   height: 85%;
   width: 100%;
-  padding: 24px 0px 0px 24px;
+  padding: 24px 0px 0px 0px;
 }
 .top-section h1 {
   font-size: 2rem;
@@ -13,15 +13,13 @@
 }
 .cards {
   width: 100%;
-  overflow: hidden;
   margin-top: 40px;
 }
 .card-body {
-  display: grid;
-  grid-template-columns: repeat(8, auto);
-  gap: 30px;
   width: 100%;
-  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 25px;
 }
 .cards-header {
   width: 98%;
