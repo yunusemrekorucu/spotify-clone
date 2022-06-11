@@ -19,11 +19,11 @@ export function MainMenu() {
     const data = response.data[0].attributes.MainMenuCards;
     setCategoryCard(data);
   };
+
   useEffect(() => {
     getLongCards();
     getCategoryCards();
   }, []);
-
   return (
     <div className="main-menu">
       <div className="top-section">
@@ -40,14 +40,10 @@ export function MainMenu() {
           <span className="see-all">HEPSİNİ GÖR</span>
         </div>
         <div className="card-body">
-          {categoryCard.map((item) => (
-            <Card
-              image={item.image}
-              title={item.title}
-              description={item.description}
-              id={item.id}
-            />
-          ))}
+          {categoryCard.map(
+            (item) =>
+            <Card image={item.image} title={item.title} description={item.description} id={item.id} /> //prettier-ignore
+          )}
         </div>
       </div>
       <div className="cards">
@@ -72,14 +68,10 @@ export function MainMenu() {
           <span className="see-all">HEPSİNİ GÖR</span>
         </div>
         <div className="card-body">
-          {categoryCard.map((item) => (
-            <Card
-              image={item.image}
-              title={item.title}
-              description={item.description}
-              id={item.id}
-            />
-          ))}
+          {categoryCard.map(
+            (item) =>
+            <Card image={item.image} title={item.title} description={item.description} id={item.id} /> //prettier-ignore
+          )}
         </div>
       </div>
     </div>

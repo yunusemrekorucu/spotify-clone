@@ -1,21 +1,34 @@
 import React, { useRef, useState } from "react";
+import { useEffect } from "react";
 import MostListened from "../../components/MostListenedList/MostListened";
 import ProfileCard from "../../components/ProfileCard/ProfileCard";
 import "./profile-style.css";
 
 function Profile() {
   const fileRef = useRef();
-  const [img, setImg] = useState("");
+  const [img, setImg] = useState(
+    "https://i.pinimg.com/474x/8f/1b/09/8f1b09269d8df868039a5f9db169a772.jpg"
+  );
+  const [profileData, setProfileData] = useState([]);
+
   const changeImage = (e) => {
-    const imagename = e.target.value;
-    var image = imagename.replace(/^.*\\/, "");
+    const image = URL.createObjectURL(e.target.files[0]);
     setImg(image);
   };
+  const getProfileData = async () => {
+    const request = await fetch("http://localhost:1337/api/profile-cards");
+    const res = await request.json();
+    setProfileData(res.data[0].attributes.ProfileCard);
+  };
+
+  useEffect(() => {
+    getProfileData();
+  }, []);
 
   return (
-    <>
+    <div className="profile-box">
       <div className="profile">
-        <div className="profile-info">
+        <div className="profile-info mb-5">
           <div className="profile-image">
             <input ref={fileRef} onChange={(e) => changeImage(e)} type="file" />
             <img
@@ -37,7 +50,7 @@ function Profile() {
           </div>
         </div>
       </div>
-      <div className="px-5 mt-5">
+      <div className="mt-5">
         <div className="cards-header flex justify-between items-center">
           <h2 className="text-2xl font-bold">
             Bu Ayın En Çok Dinlenen Sanatçıları
@@ -45,13 +58,25 @@ function Profile() {
           <span>HEPSİNİ GÖR</span>
         </div>
         <div className="profile-cards">
-          {new Array(8).fill(<ProfileCard />)}
+          {profileData.map(
+            (item) =>
+            <ProfileCard key={item.id} name={item.name} image={item.image} category={item.category}/> //prettier-ignore
+          )}
         </div>
       </div>
       <div>
         <MostListened />
       </div>
-    </>
+      <div className="mt-5">
+        <h2 className="text-2xl font-bold">Takipçiler</h2>
+        <div className="profile-cards">
+          {profileData.map(
+            (item) =>
+            <ProfileCard key={item.id} name={item.name} image={item.image} category={item.category}/> //prettier-ignore
+          )}
+        </div>
+      </div>
+    </div>
   );
 }
 export default Profile;

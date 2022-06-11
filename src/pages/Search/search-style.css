@@ -1,3 +1,6 @@
+.search-box {
+  padding: 25px;
+}
 .big-cards {
   display: grid;
   grid-template-columns: repeat(3, 425px);

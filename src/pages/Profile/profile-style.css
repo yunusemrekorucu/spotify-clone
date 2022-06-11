@@ -1,5 +1,7 @@
+.profile-box {
+  padding: 25px;
+}
 .profile {
-  padding: 20px;
   width: 100%;
   border-bottom: 1px solid black;
 }
@@ -36,7 +38,7 @@
 .profile-cards {
   display: grid;
   grid-template-columns: repeat(8, 180px);
-  gap: 15px;
+  gap: 20px;
 }
 .cards-header {
   display: flex;

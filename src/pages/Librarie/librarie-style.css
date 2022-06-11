@@ -1,0 +1,13 @@
+.librarie-box {
+  padding: 25px;
+}
+.liked-songs {
+  border-radius: 10px;
+  height: 280px;
+  width: 420px;
+  padding: 10px;
+  background: linear-gradient(#4d17f3, #8075e8);
+}
+.liked-songs p {
+  display: flex;
+}

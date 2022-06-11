@@ -6,7 +6,7 @@ import { MainMenu } from "./pages/MainMenu/MainMenu";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Profile from "./pages/Profile/Profile";
 import Search from "./pages/Search/Search";
-import Libraries from "./pages/Libraries/Libraries";
+import Librarie from "./pages/Librarie/Librarie";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
               <Route path="/" element={<MainMenu />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/search" element={<Search />} />
-              <Route path="/libraries" element={<Libraries />} />
+              <Route path="/libraries" element={<Librarie />} />
             </Routes>
           </div>
         </div>

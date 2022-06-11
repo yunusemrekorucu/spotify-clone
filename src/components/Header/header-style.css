@@ -9,6 +9,9 @@
   width: 100%;
   z-index: 199;
 }
+.headerScroll{
+  background-color: red;
+}
 .header-button {
   width: 30px;
   height: 30px;
@@ -74,4 +77,8 @@
   width: 28px;
   height: 28px;
   border-radius: 100%;
+}
+.scrollActive {
+  display: block;
+  background: black;
 }
