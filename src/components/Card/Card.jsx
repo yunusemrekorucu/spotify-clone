@@ -1,9 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./card-style.css";
 
-function Card({ title, description, image }) {
+function Card({ title, description, image, item }) {
+  const navigate = useNavigate();
+  const playList = () => {
+    console.log(item);
+    navigate("/playlist");
+  };
   return (
-    <div className="card">
+    <div onClick={() => playList()} className="card">
       <div className="img-box relative">
         <img src={image} alt="" />
         <button className="card-button">

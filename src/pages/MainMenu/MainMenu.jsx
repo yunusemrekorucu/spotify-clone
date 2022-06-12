@@ -42,7 +42,7 @@ export function MainMenu() {
         <div className="card-body">
           {categoryCard.map(
             (item) =>
-            <Card image={item.image} title={item.title} description={item.description} id={item.id} /> //prettier-ignore
+            <Card item={item} image={item.image} title={item.title} description={item.description} id={item.id} /> //prettier-ignore
           )}
         </div>
       </div>

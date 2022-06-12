@@ -4,9 +4,12 @@
 .liked-songs {
   border-radius: 10px;
   height: 280px;
-  width: 420px;
-  padding: 10px;
+  width: 440px;
+  padding: 24px;
   background: linear-gradient(#4d17f3, #8075e8);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .liked-songs p {
   display: flex;

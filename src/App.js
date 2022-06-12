@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Profile from "./pages/Profile/Profile";
 import Search from "./pages/Search/Search";
 import Librarie from "./pages/Librarie/Librarie";
+import PlayList from "./pages/PlayList/PlayList";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/search" element={<Search />} />
               <Route path="/libraries" element={<Librarie />} />
+              <Route path="/playlist/*" element={<PlayList />} />
             </Routes>
           </div>
         </div>
