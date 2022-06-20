@@ -39,7 +39,7 @@ function Sidebar() {
         </NavLink>
 
         <NavLink
-          to="/libraries"
+          to="/librarie"
           className="nav-link"
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
@@ -64,7 +64,7 @@ function Sidebar() {
         </ul>
         <hr className="mt-3 w-52 border-gray-800" />
         <div className="min-h-[530px] max-h-[530px] overflow-auto list-none">
-          {new Array(7).fill(
+          {new Array(123).fill(
             <li className="py-1 text-sm list-item">12. Çalma listem</li>
           )}
         </div>

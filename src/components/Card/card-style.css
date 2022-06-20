@@ -21,7 +21,6 @@
 }
 .img-box {
   width: 100%;
-  width: 100%;
 }
 .card img {
   width: 100%;
@@ -44,4 +43,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (max-width: 1100px) {
+  .card {
+    background: none;
+    padding: 0;
+    width: 150px;
+    border-radius: 0px;
+  }
+  .card p {
+    display: none;
+  }
+  .card h4 {
+    text-align: center;
+  }
 }

@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header-style.css";
+import { AiOutlineCaretDown ,AiOutlineCaretUp} from "react-icons/ai";
 
 export function Header() {
+  const [menu, setMenu] = useState(false);
+  const openMenu = () => {
+    if(!menu){setMenu(true)}else{setMenu(false)} //prettier-ignore
+  };
   return (
     <div className="header">
       <div className="flex">
@@ -35,29 +40,25 @@ export function Header() {
         </button>
       </div>
       <div className="dropdown">
-        <button className="header-dropdown-menu">
+        <button onClick={() => openMenu()} className="header-dropdown-menu">
           <img
             className="dropdown-img"
             src="https://i.scdn.co/image/ab6775700000ee855be80f2e3810102a23ee1daf"
             alt=""
           />
           <span className="text-sm">YunusEmr</span>
-          <svg
-            className="mr-1"
-            role="img"
-            height="16"
-            width="16"
-            class="Svg-sc-1bi12j5-0 jgfuCe eAXFT6yvz37fvS1lmt6k"
-            viewBox="0 0 16 16"
-          >
-            <path fill="#fff" d="M14 6l-6 6-6-6h12z" />
-          </svg>
+          <span className="menu-icon">{menu ? <AiOutlineCaretUp width={50}/> : <AiOutlineCaretDown width={50}/>}</span>
         </button>
-        <div class="dropdown-content">
-          <a href="#">Hesap</a>
-          <a href="/profile">Profil</a>
-          <a href="#">Oturum Kapat</a>
-        </div>
+
+        {menu ? (
+          <div className="dropdown-content">
+            <a href="/Hesap">Hesap</a>
+            <a href="/profile">Profil</a>
+            <a href="/login">Oturum Kapat</a>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

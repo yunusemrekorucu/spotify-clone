@@ -1,11 +1,11 @@
 import React from "react";
 import "./longCard-style.css";
 
-function LongCard({ title, image }) {
+function LongCard({ item }) {
   return (
     <div className="long-card">
-      <img className="long-card-img" src={image} alt="" />
-      <span className="ml-3">{title}</span>
+      <img className="long-card-img" src={item.image} alt="" />
+      <span className="ml-3">{item.title}</span>
       <button className="long-card-btn">
         <svg
           role="img"

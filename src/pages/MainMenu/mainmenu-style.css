@@ -36,3 +36,22 @@
   text-decoration: underline;
   cursor: pointer;
 }
+@media only screen and (max-width: 600px) {
+  .main-menu {
+    padding: 24px;
+  }
+  .card-body {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    touch-action: auto;
+  }
+  .cards-header span {
+    display: none;
+  }
+  .cards {
+    margin-top: 10px;
+  }
+}

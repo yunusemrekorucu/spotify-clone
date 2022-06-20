@@ -2,16 +2,16 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./card-style.css";
 
-function Card({ title, description, image, item }) {
+function Card({ item }) {
   const navigate = useNavigate();
   const playList = () => {
-    console.log(item);
     navigate("/playlist");
+    localStorage.setItem("data", JSON.stringify(item));
   };
   return (
     <div onClick={() => playList()} className="card">
       <div className="img-box relative">
-        <img src={image} alt="" />
+        <img src={item.image} alt="" />
         <button className="card-button">
           <svg
             role="img"
@@ -27,8 +27,8 @@ function Card({ title, description, image, item }) {
           </svg>
         </button>
       </div>
-      <h4>{title}</h4>
-      <p>{description}</p>
+      <h4>{item.title}</h4>
+      <p>{item.description}</p>
     </div>
   );
 }

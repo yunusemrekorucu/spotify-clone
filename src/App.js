@@ -17,12 +17,11 @@ function App() {
           <Sidebar />
           <div className="content column w-[85%]">
             <Header />
-            {/* <MainMenu /> */}
             <Routes>
               <Route path="/" element={<MainMenu />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/search" element={<Search />} />
-              <Route path="/libraries" element={<Librarie />} />
+              <Route path="/librarie" element={<Librarie />} />
               <Route path="/playlist/*" element={<PlayList />} />
             </Routes>
           </div>

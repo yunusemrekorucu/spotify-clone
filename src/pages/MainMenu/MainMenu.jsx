@@ -30,7 +30,7 @@ export function MainMenu() {
         <h1>İyi Akşamlar</h1>
         <div className="long-card-body">
           {longCard.map((item) => (
-            <LongCard title={item.title} image={item.image} key={item.id} />
+            <LongCard item={item} />
           ))}
         </div>
       </div>
@@ -42,7 +42,7 @@ export function MainMenu() {
         <div className="card-body">
           {categoryCard.map(
             (item) =>
-            <Card item={item} image={item.image} title={item.title} description={item.description} id={item.id} /> //prettier-ignore
+            <Card item={item} key={item.id} /> //prettier-ignore
           )}
         </div>
       </div>
@@ -53,12 +53,7 @@ export function MainMenu() {
         </div>
         <div className="card-body">
           {categoryCard.map((item) => (
-            <Card
-              image={item.image}
-              title={item.title}
-              description={item.description}
-              id={item.id}
-            />
+            <Card item={item} id={item.id} />
           ))}
         </div>
       </div>
@@ -70,7 +65,7 @@ export function MainMenu() {
         <div className="card-body">
           {categoryCard.map(
             (item) =>
-            <Card image={item.image} title={item.title} description={item.description} id={item.id} /> //prettier-ignore
+            <Card item={item} id={item.id} /> //prettier-ignore
           )}
         </div>
       </div>
